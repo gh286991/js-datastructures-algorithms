@@ -31,12 +31,12 @@ export default function Stack (){
     }
 }
 
-// const stack = new Stack()
-// console.log(stack.isEmpty())
+const stack = new Stack()
+console.log(stack.isEmpty())
 
-// stack.push(2)
-// stack.push(4)
-// console.log(stack.peek())
-// stack.push(11)
-// console.log(stack.size())
-// console.log(stack.isEmpty())
+stack.push(2)
+stack.push(4)
+console.log(stack.peek())
+stack.push(11)
+console.log(stack.size())
+console.log(stack.isEmpty())

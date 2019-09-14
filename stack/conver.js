@@ -1,6 +1,5 @@
-// import Stack from './stack'
-import Stack from './stackES6'
-
+import Stack from './stack'
+// import Stack from './stackES6'
 
 
 const remStack = new Stack()
