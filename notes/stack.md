@@ -142,12 +142,35 @@ const divideby2 = (decNumber)=>{
 console.log(divideby2(19))
 ```
 
-## 轉成2,8,16進制
+## 轉成其他進制
 
+要轉成其他進制也不難，就是除的東西不一樣而已，不再是除2，但如果是16進制的話因為後面數字沒到這麼大，用ABCDEF代替，然後用對應的餘數去取對應的字母即可。
 
+```js
+function baseConverter(decNumber, base){
 
-```
+    var remStack = new Stack(),
+        rem,
+        baseString = '',
+        digits = '0123456789ABCDEF';   //設定對應的字母
 
+    while (decNumber > 0){
+        rem = Math.floor(decNumber % base);
+        remStack.push(rem);
+        decNumber = Math.floor(decNumber / base);
+    }
+
+    while (!remStack.isEmpty()){
+        baseString += digits[remStack.pop()]; //存進去的餘數對應的字母
+    }
+
+    return baseString;
+}
+
+console.log('--------')
+console.log(baseConverter(999 , 2))  //>>>1111100111
+console.log(baseConverter(999 , 8))	 //>>>1747
+console.log(baseConverter(999 , 16)) //>>>3E7
 ```
 
 
