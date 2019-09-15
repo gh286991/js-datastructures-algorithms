@@ -30,7 +30,7 @@ export default class Stack {
   }
 
   print() {
-    console.log(this.toString());
+    console.log(this[_items]);
   }
 
   toString() {
