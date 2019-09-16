@@ -20,6 +20,7 @@ const start = new Stack();
 const end = new Stack();
 const helper = new Stack();
 
+
 start['name'] = 'A'
 end['name'] = 'C'
 helper['name'] = 'B'
@@ -31,12 +32,12 @@ helper['name'] = 'B'
 start.push(3);
 start.push(2);
 start.push(1);
-
-
 const N = start.size()
 
+console.log('----開始---')
 start.print()
 
 towerOfHanoi(N,start,end,helper)
-console.log('----end---')
+
+console.log('----結束---')
 end.print()
